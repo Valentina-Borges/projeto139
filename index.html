@@ -1,0 +1,60 @@
+<!--created by prashant shukla-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IA PING PONG</title>
+ 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
+    </head>
+    <body background="background1.jpg">
+        <center>
+
+            <div class="btn btn-warning heading">
+                <h3>IA PING PONG</h3>
+                <button class="btn btn-waring" data-toggle="modal" data-target="#myModal">instruçôes</button>
+            </div>
+
+            <br><br>
+            <button class="btn btn-sucess" onclick="startGame()" id="start">Jogar</button>
+            <br><br>
+            <h3 id="status" class="btn btn-default"></h3>
+            <br><br>
+            <button onclick="restart()" class="btn btn-danger" id="restart">Recomeçar</button>
+            <br><br>
+
+            <h4>Desenvolvido por: Time BYJUS'S</h4>
+
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog" >
+                    <!-- Conteudo do popup/modal-->
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button class="close" data-dimiss="modal">&times;</button>
+                            <h3>Instruções</h3>
+                        </div>
+                        <div class="modal-body">
+                            <ol>
+                                <li>Mantenha a tela do seu notebook reta</li>
+                                <li>Fique a aproximadamente 1 metro de distância do notebook</li>
+                                <li>Mova seu punho direito na vertical, de cima para baixo. Um ponto vermelho deve aparecer em seu punho</li>
+                                <li>Pressione o botão "Jogar" e, mais uma vez, fique a 1 metro do notebook</li>
+                                <li>A raquete vermeha é a sua. Ela se move de acordo com o moovimento doo seu punho direito</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <scripit src="main.js"></scripit>
+    </body>
+    </html>
