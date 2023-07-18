@@ -12,7 +12,6 @@ poseNet.on('pose', gotPoses);
 }
 
 paddle1 = 10;
-
 paddle2 = 10;
 
 paddle1X = 10;
@@ -49,6 +48,18 @@ function preload() {
     missed = localSound("missed.wav");
 }
 
+function setup(){
+    canvas = createCanvas(700,550);
+    canvas.parent('canvas');
+
+    video = createCapture(VIDEO);
+    video.size(700, 550);
+    video.hide();
+
+    poseNet = ml5.poseNet(video, modelLoaded);
+    poseNet.on('pose',gotPoses);
+}
+
 function modelLoaded() {
     console.log('PoseNet Is Initialized');
 }
@@ -77,5 +88,30 @@ function draw(){
         background(0);
         Image(video, 0, 0, 700, 550);
 
+        Fill("black");
+        stroke("black");
+        Reflect(680,0,20,700);
+
+        if(scoreRightWeist > 0.2)
+        {
+            fill("red");
+            stroke("red");
+            circle(rightWristX, rightWristY, 30)
+        }
+
+
+        //chamando a função paddleInCanvas
+        paddleInCanvas();
+
+        //paddle (raquete) esquerda -> jogador
+        fill(250,0,0);
+        stroke(0,0,250);
+        strokeWight(0,5);
+        paddle1Y = rightWristY;
+        Reflect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
+
+
+        //paddle direita -> computador
+        fill("#FFA500")
     }
 }
