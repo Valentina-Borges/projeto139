@@ -18,43 +18,47 @@
         <center>
 
             <div class="btn btn-warning heading">
-                <h3>IA PING PONG</h3>
-                <button class="btn btn-waring" data-toggle="modal" data-target="#myModal">instruçôes</button>
+              <h3>IA PING PONG</h3>
+              <button class="btn btn-warning"  data-toggle="modal" data-target="#myModal">Instruções</button>
             </div>
-
+      
             <br><br>
-            <button class="btn btn-sucess" onclick="startGame()" id="start">Jogar</button>
+            <button class="btn btn-success" onclick="startGame()" id="start">Jogar</button>
             <br><br>
             <h3 id="status" class="btn btn-default"></h3>
             <br><br>
+            <div id="canvas"></div>
+            <br><br>
             <button onclick="restart()" class="btn btn-danger" id="restart">Recomeçar</button>
             <br><br>
-
-            <h4>Desenvolvido por: Time BYJUS'S</h4>
-
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog" >
-                    <!-- Conteudo do popup/modal-->
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <button class="close" data-dimiss="modal">&times;</button>
-                            <h3>Instruções</h3>
-                        </div>
-                        <div class="modal-body">
-                            <ol>
-                                <li>Mantenha a tela do seu notebook reta</li>
-                                <li>Fique a aproximadamente 1 metro de distância do notebook</li>
-                                <li>Mova seu punho direito na vertical, de cima para baixo. Um ponto vermelho deve aparecer em seu punho</li>
-                                <li>Pressione o botão "Jogar" e, mais uma vez, fique a 1 metro do notebook</li>
-                                <li>A raquete vermeha é a sua. Ela se move de acordo com o moovimento doo seu punho direito</li>
-                            </ol>
-                        </div>
+            
+            <h4>Desenvolvido por: Time BYJU'S</h4>
+        
+            <div id="myModal" class="modal fade ">
+              <div class="modal-dialog" >
+                <!-- Conteúdo do popup/modal-->
+                <div class="modal-content">
+            
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h3>Instruções</h#>
+                  </div>
+            
+                   <div class="modal-body">
+                       <ol>
+                           <li>Mantenha a tela do seu notebook reta</li>
+                           <li>Fique a aproximadamente 1 metro de distância do notebook</li>
+                           <li>Mova seu punho direita na vertical, de cima para baixo. Um ponto vermelho deve aparecer sobre seu punho</li>
+                           <li>Pressione o botão "Jogar" e, mais uma vez, fique a 1 metro do notebook</li>
+                           <li>A raquete vermelha é a sua. Ela se move de acordo com o movimento do seu punho direito</li>
+                       </ol>
                     </div>
+      
                 </div>
+              </div>
             </div>
-        </center>
+      </center>
 
-        <scripit src="main.js"></scripit>
-    </body>
-    </html>
+<script src="main.js"></script>
+</body>
+</html>
